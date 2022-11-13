@@ -108,11 +108,11 @@ for (var i = 0; i < finances.length; i++){
         netArray.push(change);
 
         if (change > greatest[1]) {
-            greatest = [finances[i][0], finances[i][1]];
+            greatest = [finances[i][0], "$" + finances[i][1]];
         }
 
         if (change < least[1]) {
-            least = [finances[i][0], finances[i][1]];
+            least = [finances[i][0], "$" + finances[i][1]];
         }   
         }
     }
@@ -129,7 +129,7 @@ var total_months = finances.length
 
 var message = "Financial Analysis \n" + "------------- \n"
 + "Total Months: " + total_months + "\n"
-+ "Total: " + total + "\n"
++ "Total: $" + total + "\n"
 + "Average Change: " + average + "\n"
 + "Greatest Increase: " + greatest + "\n"
 + "Greatest Decrease: " + least + "\n"
